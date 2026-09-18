@@ -29,15 +29,16 @@ uint8_t header_end   !  = 0xFF
 [PART 2 (the character list)]
 uint8_t header_start !  = 0xEE
 uint32_t signature   !  = "LFH" + 0x02      [0x02 because it is the second part of the header]
-uint32_t length      !  = XXXX              [Calculated by the following formula: font_chars * (sizeof(uint8_t) + sizeof(uint32_t)) // font_chars * 5
+uint32_t length         = XXXX              [Calculated by the following formula: font_chars * (sizeof(uint8_t) + sizeof(uint32_t)) // font_chars * 5
 uint32_t list           = XXXX              [The byte offset from the start of the file to the list of characters, should be 25 but can be variable for some funny message in the header file i guess)]
 uint8_t header_end   !  = 0xEE
+
+------------------------------
 
 [PART 3 (the list of characters)]
 font_chars ammount of:
 uint8_t letter                              [In extended ascii -- Windows-1252]
 uint32_t offset                             [The byte offset from the start of the file to the specified character]
-
 
 
 $letterOffset:
