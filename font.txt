@@ -1,0 +1,11 @@
+version 1.0 of the LFH (Liam's Font Header) is a 10 byte long file header consisting of the following data types and default and/or hardcoded values:
+everything with a "!" in the spacing is a hard coded value that cant be changed because elsewise the header would be invalid!
+
+uint8_t header_start !  = 0xFF
+uint32_t signature   !  = "LFH" + 0x00
+uint8_t fontWidth    !  = 0x05
+uint8_t fontHeight   !  = 0x07
+uint8_t fontChars       = 0xD9
+uint8_t isExtendedAscii = 0x01
+uint8_t header_end   !  = 0xFF
+
